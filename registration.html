@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="web-ресурс, который позволит найти нормативный документ в базе знаний предприятия"
+    />
+    <meta
+      name="author"
+      content="Прытков Даниил, Кулешов Алексей, Ибрагим Мурадов, Тимофей Соколов"
+    />
+
+    <!-- Иконкиa -->
+    <link rel="icon" href="./favicon/favicon.ico" sizes="any" />
+    <link rel="icon" href="./favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png" />
+
+    <!-- Превью -->
+    <meta property="og:title" content="Лучший сайт во вселенной" />
+    <meta property="og:url" content="#" />
+    <meta property="og:image" content="#" />
+    <title>Сигнал</title>
+
+    <!-- Подключалки -->
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/registration.css" />
+  </head>
+
+  <body>
+    <form autocomplete="on" action="#">
+      <!-- почта -->
+      <label for="email" class="visually-hidden">Почта</label>
+      <input
+        type="email"
+        inputmode="email"
+        placeholder="me@example.com"
+        id="email"
+        name="email"
+        autocomplete="email"
+        required=""
+      />
+
+      <!-- пароль -->
+      <label for="password" class="visually-hidden">Пароль</label>
+      <input
+        type="password"
+        placeholder="********"
+        id="password"
+        name="password"
+        autocomplete="current-password"
+        required=""
+      />
+
+      <!-- запоминалка -->
+      <label for="authorized" class="agree">
+        <input type="checkbox" id="authorized" name="authorized" /> Запомнить
+        меня
+      </label>
+      <button type="submit">Войти</button>
+    </form>
+  </body>
+</html>
