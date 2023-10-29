@@ -33,7 +33,7 @@ class Search():
                     """
                 )
                 data = cur.fetchall()
-                self.answer = '\n'.join([dt[1] for dt in data if (dt[2] == tag or dt[2] == 'все') and inpt.lower() in dt[0].lower()])
+                self.answer = '\n\n'.join([dt[1] for dt in data if (dt[2] == tag or dt[2] == 'все') and inpt.lower() in dt[0].lower()])
                 # return ''.join([dt[1] for dt in data if (dt[2] == tag or dt[2] == 'все') and inpt.lower() in dt[0].lower()])
             case 'type':
                 cur.execute(
@@ -42,7 +42,7 @@ class Search():
                     """
                 )
                 data = cur.fetchall()
-                self.answer = [dt[1] for dt in data if (dt[2] == tag or dt[2] == 'все') and inpt.lower() in dt[0].lower()]
+                self.answer = '\n\n'.join([dt[1] for dt in data if (dt[2] == tag or dt[2] == 'все') and inpt.lower() in dt[0].lower()])
            
             case 'name':
                 cur.execute(
@@ -51,7 +51,7 @@ class Search():
                     """ 
                 )
                 data = cur.fetchall()
-                self.answer = [dt[0] for dt in data if (dt[1] == tag or dt[1] == 'все') and inpt.lower() in dt[0].lower()]
+                self.answer = '\n\n'.join([dt[0] for dt in data if (dt[1] == tag or dt[1] == 'все') and inpt.lower() in dt[0].lower()])
             
             case 'number':
                 cur.execute(
@@ -60,7 +60,7 @@ class Search():
                     """
                 )
                 data = cur.fetchall()
-                self.answer = [dt[1] for dt in data if (dt[2] == tag or dt[2] == 'все') and inpt.lower() in str(dt[0]).lower()]
+                self.answer = '\n\n'.join([dt[1] for dt in data if (dt[2] == tag or dt[2] == 'все') and inpt.lower() in str(dt[0]).lower()])
             
             case 'date_exit':
                 cur.execute(
@@ -69,7 +69,7 @@ class Search():
                     """
                 )
                 data = cur.fetchall()
-                self.answer = [dt[1] for dt in data if (dt[2] == tag or dt[2] == 'все') and inpt.lower() in str(dt[0]).lower()]
+                self.answer = '\n\n'.join([dt[1] for dt in data if (dt[2] == tag or dt[2] == 'все') and inpt.lower() in str(dt[0]).lower()])
             
             case 'date_enter':
                 cur.execute(
@@ -78,9 +78,12 @@ class Search():
                     """
                 )
                 data = cur.fetchall()
-                self.answer = [dt[1] for dt in data if (dt[2] == tag or dt[2] == 'все') and inpt.lower() in str(dt[0]).lower()]
+                self.answer = '\n\n'.join([dt[1] for dt in data if (dt[2] == tag or dt[2] == 'все') and inpt.lower() in str(dt[0]).lower()])
 
-
+"""
+    ЭТО ТЕСТ
+      ↓↓↓
+            """
 a = Search()
 a.way_search = 'keyword' #тип поиска
 a.search('технологии', 'инженер') #входные данные: "технологии" - ключевое слово, "инженер" - должность
